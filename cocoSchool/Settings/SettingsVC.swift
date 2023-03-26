@@ -62,4 +62,7 @@ class SettingsViewController: UIViewController, RangeSeekSliderDelegate {
         rangeMin = Int(rasponSlider.selectedMinValue)
         rangeMax = Int(rasponSlider.selectedMaxValue)
     }
+    @IBAction func timeTextFieldChanged(_ sender: Any) {
+        timeLimit = timeTextField.text ?? "5"
+    }
 }

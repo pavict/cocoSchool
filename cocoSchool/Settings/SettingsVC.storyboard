@@ -184,8 +184,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="yQq-34-2rA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="timeTextFieldChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="8bh-OE-Hly"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>

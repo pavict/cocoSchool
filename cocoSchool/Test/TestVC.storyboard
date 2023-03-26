@@ -326,13 +326,21 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-uo-vde">
+                                                        <rect key="frame" x="487" y="25" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.65128310022085101" green="0.83748632670000001" blue="0.6639750137602749" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" red="0.66002543420000004" green="0.8594040691" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="BjO-i7-R9H" firstAttribute="centerX" secondItem="oT5-TP-O5M" secondAttribute="centerX" id="6we-VS-5xR"/>
                                                     <constraint firstItem="BjO-i7-R9H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oT5-TP-O5M" secondAttribute="leading" constant="60" id="KRp-Mk-hLi"/>
+                                                    <constraint firstItem="bdG-uo-vde" firstAttribute="top" secondItem="oT5-TP-O5M" secondAttribute="top" constant="25" id="MD9-Xf-1sA"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BjO-i7-R9H" secondAttribute="trailing" constant="60" id="UHk-k5-OIV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bdG-uo-vde" secondAttribute="trailing" constant="25" id="twx-T6-UHA"/>
                                                     <constraint firstItem="BjO-i7-R9H" firstAttribute="centerY" secondItem="oT5-TP-O5M" secondAttribute="centerY" id="zT2-pz-l78"/>
                                                 </constraints>
                                             </view>
@@ -639,6 +647,12 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liY-Wl-EPn">
+                                                        <rect key="frame" x="487" y="25" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.82674266716359568" green="0.7031795188330453" blue="0.83748632670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" red="0.66002543420000004" green="0.8594040691" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -647,6 +661,8 @@
                                                     <constraint firstItem="znj-HA-K8z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XAE-VY-Kif" secondAttribute="leading" constant="60" id="EdV-qT-OLa"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="znj-HA-K8z" secondAttribute="trailing" constant="60" id="dMs-cT-9HP"/>
                                                     <constraint firstItem="znj-HA-K8z" firstAttribute="centerY" secondItem="XAE-VY-Kif" secondAttribute="centerY" id="eIh-Rd-g78"/>
+                                                    <constraint firstAttribute="trailing" secondItem="liY-Wl-EPn" secondAttribute="trailing" constant="25" id="eT8-fV-qbB"/>
+                                                    <constraint firstItem="liY-Wl-EPn" firstAttribute="top" secondItem="XAE-VY-Kif" secondAttribute="top" constant="25" id="p6B-Zx-4yi"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -957,12 +973,20 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-Cn-1rp">
+                                                        <rect key="frame" x="487" y="25" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.82596708909817829" green="0.83748632669448853" blue="0.66115640730256342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" red="0.66002543421098359" green="0.85940406905506384" blue="0.86078917980194092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="E8R-Cn-1rp" secondAttribute="trailing" constant="25" id="Iv3-oI-U30"/>
                                                     <constraint firstItem="9R0-cf-GkG" firstAttribute="centerY" secondItem="j3q-Vt-MrZ" secondAttribute="centerY" id="NDR-ei-Xk1"/>
                                                     <constraint firstItem="9R0-cf-GkG" firstAttribute="centerX" secondItem="j3q-Vt-MrZ" secondAttribute="centerX" id="Zbf-LI-G3j"/>
+                                                    <constraint firstItem="E8R-Cn-1rp" firstAttribute="top" secondItem="j3q-Vt-MrZ" secondAttribute="top" constant="25" id="js5-A7-COI"/>
                                                     <constraint firstItem="9R0-cf-GkG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j3q-Vt-MrZ" secondAttribute="leading" constant="60" id="uJ4-0Q-ikv"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9R0-cf-GkG" secondAttribute="trailing" constant="60" id="zrS-iL-2U8"/>
                                                 </constraints>
@@ -1270,6 +1294,12 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-8x-bHn">
+                                                        <rect key="frame" x="487" y="25" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.6425542594598489" green="0.82639267174449449" blue="0.83748632670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" red="0.66002543420000004" green="0.8594040691" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1277,7 +1307,9 @@
                                                     <constraint firstItem="DTs-qN-jtQ" firstAttribute="centerX" secondItem="SzK-YD-b9g" secondAttribute="centerX" id="JYi-il-RBN"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DTs-qN-jtQ" secondAttribute="trailing" constant="60" id="S2K-VN-gsn"/>
                                                     <constraint firstItem="DTs-qN-jtQ" firstAttribute="centerY" secondItem="SzK-YD-b9g" secondAttribute="centerY" id="Tez-ap-t79"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sIY-8x-bHn" secondAttribute="trailing" constant="25" id="dpP-o8-HUq"/>
                                                     <constraint firstItem="DTs-qN-jtQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SzK-YD-b9g" secondAttribute="leading" constant="60" id="enk-85-MYa"/>
+                                                    <constraint firstItem="sIY-8x-bHn" firstAttribute="top" secondItem="SzK-YD-b9g" secondAttribute="top" constant="25" id="f6z-hw-4L2"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1357,6 +1389,10 @@
                         <outlet property="p4ResultLabel" destination="dlp-1H-vJP" id="dIJ-7E-FiT"/>
                         <outlet property="p4TaskLabel" destination="fHM-n7-bEh" id="LcT-6B-AR1"/>
                         <outlet property="p4View" destination="SzK-YD-b9g" id="FS9-6d-6as"/>
+                        <outlet property="timerP1" destination="E8R-Cn-1rp" id="uV7-gJ-RIi"/>
+                        <outlet property="timerP2" destination="bdG-uo-vde" id="S89-gj-1kl"/>
+                        <outlet property="timerP3" destination="liY-Wl-EPn" id="kkT-7K-pt2"/>
+                        <outlet property="timerP4" destination="sIY-8x-bHn" id="poV-S8-3dw"/>
                         <outlet property="upperStackView" destination="9jQ-Xi-oX0" id="Y4b-fo-0pN"/>
                     </connections>
                 </viewController>

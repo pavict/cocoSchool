@@ -26,6 +26,12 @@ class TestViewController: UIViewController {
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var upperStackView: UIStackView!
     
+    // MARK: - Timer labels
+    @IBOutlet weak var timerP1: UILabel!
+    @IBOutlet weak var timerP2: UILabel!
+    @IBOutlet weak var timerP3: UILabel!
+    @IBOutlet weak var timerP4: UILabel!
+    
     // MARK: - Player Views Outlets
     @IBOutlet weak var p1View: UIView!
     @IBOutlet weak var p2View: UIView!
@@ -114,15 +120,56 @@ class TestViewController: UIViewController {
     var isP4Correct: Bool = false
     
     // MARK: - OPERATORS TODO
-    let firstOperator = Operacije.allCases.randomElement()
-    let secondOperator = Operacije.allCases.randomElement()
-    let thirdOperator = Operacije.allCases.randomElement()
-    let fourthOperator = Operacije.allCases.randomElement()
+    var operationP1: Operacije = .zbrajanje
+    var operationP2: Operacije = .zbrajanje
+    var operationP3: Operacije = .zbrajanje
+    var operationP4: Operacije = .zbrajanje
+    
+    // MARK: - Default timer seconds
+    var count = 300
     
     // MARK: - Class lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        count = (Int(timeLimit) ?? 5) * 60
+        
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
+        p2View.rotate(angle:180)
+        p3View.rotate(angle: 180)
+        
+        configureP1Keyboard()
+        configureP2Keyboard()
+        configureP3Keyboard()
+        configureP4Keyboard()
+        
+        generateTaskP1()
+        generateTaskP2()
+        generateTaskP3()
+        generateTaskP4()
+    }
+    
+    @objc func update() {
+        if(count > 0){
+            let minutes = String(count / 60)
+            let seconds = String(count % 60)
+            timerP1.text = minutes + ":" + seconds
+            timerP2.text = minutes + ":" + seconds
+            timerP3.text = minutes + ":" + seconds
+            timerP4.text = minutes + ":" + seconds
+            count -= 1
+        } else {
+            dismiss(animated: true)
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
+    // MARK: - Configure Screen
+    func configureScreen() {
         if brojIgraca != 4 {
             mainStackView.removeArrangedSubview(p4View)
             p4View.removeFromSuperview()
@@ -137,94 +184,73 @@ class TestViewController: UIViewController {
                 }
             }
         }
-        
-        p2View.rotate(angle:180)
-        p3View.rotate(angle: 180)
-        
-        configureP1Keyboard()
-        configureP2Keyboard()
-        configureP3Keyboard()
-        configureP4Keyboard()
-        
-        generateTaskP1()
-        generateTasksP2()
-        generateTasksP3()
-        generateTasksP4()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        true
     }
     
     // MARK: - Generating tasks
     func generateTaskP1 () {
         let firstNumber = generateNumber()
         let secondNumber = generateNumber()
+        let operation = Operacije.allCases.randomElement() ?? .zbrajanje
         
-        switch firstOperator {
+        switch operation {
         case .zbrajanje:
             resultP1 = firstNumber + secondNumber
         case .oduzimanje:
             resultP1 = firstNumber - secondNumber
-        case .none:
-            break
         }
         
-        let task = "\(firstNumber) \(firstOperator!.rawValue) \(secondNumber) ="
+        let task = "\(firstNumber) \(operation.rawValue) \(secondNumber) ="
         
         p1TaskLabel.text = task
     }
     
-    func generateTasksP2() {
+    func generateTaskP2() {
         let firstNumber = generateNumber()
         let secondNumber = generateNumber()
+        let operation = Operacije.allCases.randomElement() ?? .zbrajanje
 
-        switch secondOperator {
+        switch operation {
         case .zbrajanje:
             resultP2 = firstNumber + secondNumber
         case .oduzimanje:
             resultP2 = firstNumber - secondNumber
-        case .none:
-            break
         }
 
-        let task = "\(firstNumber) \(secondOperator!.rawValue) \(secondNumber) ="
+        let task = "\(firstNumber) \(operation.rawValue) \(secondNumber) ="
 
         p2TaskLabel.text = task
     }
     
-    func generateTasksP3() {
+    func generateTaskP3() {
         let firstNumber = generateNumber()
         let secondNumber = generateNumber()
+        let operation = Operacije.allCases.randomElement() ?? .zbrajanje
 
-        switch thirdOperator {
+        switch operation {
         case .zbrajanje:
             resultP3 = firstNumber + secondNumber
         case .oduzimanje:
             resultP3 = firstNumber - secondNumber
-        case .none:
-            break
         }
 
-        let task = "\(firstNumber) \(thirdOperator!.rawValue) \(secondNumber) ="
+        let task = "\(firstNumber) \(operation.rawValue) \(secondNumber) ="
 
         p3TaskLabel.text = task
     }
     
-    func generateTasksP4() {
+    func generateTaskP4() {
         let firstNumber = generateNumber()
         let secondNumber = generateNumber()
+        let operation = Operacije.allCases.randomElement() ?? .zbrajanje
 
-        switch thirdOperator {
+        switch operation {
         case .zbrajanje:
             resultP4 = firstNumber + secondNumber
         case .oduzimanje:
             resultP4 = firstNumber - secondNumber
-        case .none:
-            break
         }
 
-        let task = "\(firstNumber) \(fourthOperator!.rawValue) \(secondNumber) ="
+        let task = "\(firstNumber) \(operation.rawValue) \(secondNumber) ="
 
         p4TaskLabel.text = task
     }
@@ -258,6 +284,7 @@ class TestViewController: UIViewController {
     }
     
     func configureP2Keyboard() {
+        doneButtonP2.addTarget(self, action: #selector(doneButtonPressedP2(sender:)), for: .touchUpInside)
         deleteP2.addTarget(self, action: #selector(deleteP2ButtonAction(sender:)), for: .touchUpInside)
 
         numberOneP2.addTarget(self, action: #selector(p2KeyboardAction(sender:)), for: .touchUpInside)
@@ -273,6 +300,7 @@ class TestViewController: UIViewController {
     }
     
     func configureP3Keyboard() {
+        doneButtonP3.addTarget(self, action: #selector(doneButtonPressedP3(sender:)), for: .touchUpInside)
         deleteP3.addTarget(self, action: #selector(deleteP3ButtonAction(sender:)), for: .touchUpInside)
 
         numberOneP3.addTarget(self, action: #selector(p3KeyboardAction(sender:)), for: .touchUpInside)
@@ -288,6 +316,7 @@ class TestViewController: UIViewController {
     }
     
     func configureP4Keyboard() {
+        doneButtonP4.addTarget(self, action: #selector(doneButtonPressedP4(sender:)), for: .touchUpInside)
         deleteP4.addTarget(self, action: #selector(deleteP4ButtonAction(sender:)), for: .touchUpInside)
 
         numberOneP4.addTarget(self, action: #selector(p4KeyboardAction(sender:)), for: .touchUpInside)
@@ -314,15 +343,15 @@ class TestViewController: UIViewController {
     }
     
     @objc func doneButtonPressedP1(sender: UIButton) {
-        let p1Answer = Int(p1ResultLabel.text ?? "0")
+        let answer = Int(p1ResultLabel.text ?? "0")
         
-        if (p1Answer == resultP1) {
-            doneButtonP1.backgroundColor = .green
+        if (answer == resultP1) {
             isP1Correct = true
         } else {
-            doneButtonP1.backgroundColor = .red
             isP1Correct = false
         }
+        
+        generateTaskP1()
     }
     
     @objc func p2KeyboardAction(sender: UIButton) {
@@ -335,6 +364,18 @@ class TestViewController: UIViewController {
         p2ResultLabel.text = String(p2ResultLabel.text!.dropLast())
     }
     
+    @objc func doneButtonPressedP2(sender: UIButton) {
+        let answer = Int(p2ResultLabel.text ?? "0")
+        
+        if (answer == resultP2) {
+            isP2Correct = true
+        } else {
+            isP2Correct = false
+        }
+        
+        generateTaskP2()
+    }
+    
     @objc func p3KeyboardAction(sender: UIButton) {
         guard let value = sender.titleLabel?.text else { return }
         
@@ -342,7 +383,19 @@ class TestViewController: UIViewController {
     }
     
     @objc func deleteP3ButtonAction(sender: UIButton) {
-        p2ResultLabel.text = String(p3ResultLabel.text!.dropLast())
+        p3ResultLabel.text = String(p3ResultLabel.text!.dropLast())
+    }
+    
+    @objc func doneButtonPressedP3(sender: UIButton) {
+        let answer = Int(p3ResultLabel.text ?? "0")
+        
+        if (answer == resultP3) {
+            isP3Correct = true
+        } else {
+            isP3Correct = false
+        }
+        
+        generateTaskP3()
     }
     
     @objc func p4KeyboardAction(sender: UIButton) {
@@ -353,6 +406,18 @@ class TestViewController: UIViewController {
     
     @objc func deleteP4ButtonAction(sender: UIButton) {
         p4ResultLabel.text = String(p4ResultLabel.text!.dropLast())
+    }
+    
+    @objc func doneButtonPressedP4(sender: UIButton) {
+        let answer = Int(p4ResultLabel.text ?? "0")
+        
+        if (answer == resultP4) {
+            isP4Correct = true
+        } else {
+            isP4Correct = false
+        }
+        
+        generateTaskP4()
     }
 }
 
