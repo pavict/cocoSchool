@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		155D7A8529A68C6E00BEAC23 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D7A8429A68C6E00BEAC23 /* TestVC.swift */; };
 		155D7A8929A6933A00BEAC23 /* SettingsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155D7A8829A6933A00BEAC23 /* SettingsVC.storyboard */; };
 		155D7A8B29A6934600BEAC23 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D7A8A29A6934600BEAC23 /* SettingsVC.swift */; };
+		D8F7C1AFBF0D8CB6BC23AB33 /* Pods_cocoSchool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B133E4D6F3496E1CAE07579 /* Pods_cocoSchool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		155D7A8429A68C6E00BEAC23 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		155D7A8829A6933A00BEAC23 /* SettingsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsVC.storyboard; sourceTree = "<group>"; };
 		155D7A8A29A6934600BEAC23 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		5B133E4D6F3496E1CAE07579 /* Pods_cocoSchool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocoSchool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C709BE3A6E58F7F457D1A1D /* Pods-cocoSchool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoSchool.debug.xcconfig"; path = "Target Support Files/Pods-cocoSchool/Pods-cocoSchool.debug.xcconfig"; sourceTree = "<group>"; };
+		AE559ED0999130E7F7145970 /* Pods-cocoSchool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoSchool.release.xcconfig"; path = "Target Support Files/Pods-cocoSchool/Pods-cocoSchool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F7C1AFBF0D8CB6BC23AB33 /* Pods_cocoSchool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				155653CA29898D25005B872D /* cocoSchool */,
 				155653C929898D25005B872D /* Products */,
+				58B347277A9484E031324E8E /* Pods */,
+				E9FD171A711DE3B98F33B565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,23 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		58B347277A9484E031324E8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C709BE3A6E58F7F457D1A1D /* Pods-cocoSchool.debug.xcconfig */,
+				AE559ED0999130E7F7145970 /* Pods-cocoSchool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9FD171A711DE3B98F33B565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B133E4D6F3496E1CAE07579 /* Pods_cocoSchool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 155653DC29898D27005B872D /* Build configuration list for PBXNativeTarget "cocoSchool" */;
 			buildPhases = (
+				FC644C14067B018192FA7EB6 /* [CP] Check Pods Manifest.lock */,
 				155653C429898D25005B872D /* Sources */,
 				155653C529898D25005B872D /* Frameworks */,
 				155653C629898D25005B872D /* Resources */,
+				89739D1FA090DEE05F0F0BCC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,7 +165,7 @@
 				};
 			};
 			buildConfigurationList = 155653C329898D25005B872D /* Build configuration list for PBXProject "cocoSchool" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -170,6 +196,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89739D1FA090DEE05F0F0BCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cocoSchool/Pods-cocoSchool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cocoSchool/Pods-cocoSchool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cocoSchool/Pods-cocoSchool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC644C14067B018192FA7EB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cocoSchool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		155653C429898D25005B872D /* Sources */ = {
@@ -322,9 +390,9 @@
 		};
 		155653DD29898D27005B872D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C709BE3A6E58F7F457D1A1D /* Pods-cocoSchool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R27V7M322Q;
@@ -350,9 +418,9 @@
 		};
 		155653DE29898D27005B872D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE559ED0999130E7F7145970 /* Pods-cocoSchool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R27V7M322Q;
