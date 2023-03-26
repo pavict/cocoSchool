@@ -241,7 +241,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="turn-back" width="512" height="512"/>
+        <image name="turn-back" width="256" height="256"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

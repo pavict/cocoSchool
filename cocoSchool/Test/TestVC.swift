@@ -17,39 +17,27 @@ enum Operacije: String, CaseIterable {
     case zbrajanje = "+"
     case oduzimanje = "-"
 //    case mnozenje = "*"
-//    case dijeljenje = "/"
+//    case dijeljenje = ":"
 }
 
 class TestViewController: UIViewController {
     
-    //VIEWS
+    // MARK: - Player Views Outlets
     @IBOutlet weak var p1View: UIView!
     @IBOutlet weak var p2View: UIView!
     @IBOutlet weak var p3View: UIView!
     
-    // ELEMENTS
-    @IBOutlet weak var tasksP1: UIStackView!
+    // MARK: - Keyboards Outlets
     @IBOutlet weak var keyboardP1: UIStackView!
     
-    // PLAYER ONE LABELS
-    @IBOutlet weak var firstTaskLabelP1: UILabel!
+    // MARK: - Player Task Labels Outlets
+    @IBOutlet weak var p1TaskLabel: UILabel!
+    @IBOutlet weak var p2TaskLabel: UILabel!
+    @IBOutlet weak var p3TaskLabel: UILabel!
+    @IBOutlet weak var p1ResultLabel: UILabel!
     
-    // PLAYER TWO LABELS
-    @IBOutlet weak var firstTaskLabelP2: UILabel!
     
-    // PLAYER THREE LABELS
-    @IBOutlet weak var firstTaskLabelP3: UILabel!
-    
-    // PLAYER ONE TEXTFIELDS
-    @IBOutlet weak var firstTaskResultP1: UITextField!
-    
-    // PLAYER TWO TEXTFIELDS
-    @IBOutlet weak var firstTaskResultP2: UITextField!
-    
-    // PLAYER THREE TEXTFIELDS
-    @IBOutlet weak var firstTastResultP3: UITextField!
-    
-    // PLAYER ONE KEYBOARD
+    // MARK: - P1 keyboard
     @IBOutlet weak var numberOneP1: UIButton!
     @IBOutlet weak var numberTwoP1: UIButton!
     @IBOutlet weak var numberThreeP1: UIButton!
@@ -63,7 +51,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var deleteP1: UIButton!
     @IBOutlet weak var doneButtonP1: UIButton!
     
-    // PLAYER TWO KEYBOARD
+    // MARK: - P2 keyboard
     @IBOutlet weak var numberOneP2: UIButton!
     @IBOutlet weak var numberTwoP2: UIButton!
     @IBOutlet weak var numberThreeP2: UIButton!
@@ -77,7 +65,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var deleteP2: UIButton!
     @IBOutlet weak var doneButtonP2: UIButton!
     
-    // PLAYER THREE KEYBOARD
+    // MARK: - P3 keyboard
     @IBOutlet weak var numberOneP3: UIButton!
     @IBOutlet weak var numberTwoP3: UIButton!
     @IBOutlet weak var numberThreeP3: UIButton!
@@ -99,23 +87,12 @@ class TestViewController: UIViewController {
     
     // CORRECT RESULTS
     var firstResultP1: Int = 0
-    var secondResultP1: Int = 0
-    var thirdResultP1: Int = 0
-    var fourthResultP1: Int = 0
-    
     var firstResultP2: Int = 0
-    var secondResultP2: Int = 0
-    var thirdResultP2: Int = 0
-    var fourthResultP2: Int = 0
-    
     var firstResultP3: Int = 0
-    var secondResultP3: Int = 0
-    var thirdResultP3: Int = 0
-    var fourthResultP3: Int = 0
     
-    var allCorrectP1: Bool = false
-    var allCorrectP2: Bool = false
-    var allCorrectP3: Bool = false
+    var isP1Correct: Bool = false
+    var isP2Correct: Bool = false
+    var isP3Correct: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,198 +106,138 @@ class TestViewController: UIViewController {
         configureP2Keyboard()
         configureP3Keyboard()
         
-        generateTasksP1()
+        generateTaskP1()
         generateTasksP2()
         generateTasksP3()
     }
     
     @objc func doneP1ButtonPressed(_ sender: Any) {
+        let p1Answer = Int(p1ResultLabel.text ?? "0")
         
-        let firstAnswer = Int(firstTaskResultP1.text ?? "0")
-        
-        let isEverythingCorrect: Bool = {
-            if (firstAnswer == firstResultP1) { return true } else { return false }
-        }()
-        
-        if isEverythingCorrect {
+        if (p1Answer == firstResultP1) {
             doneButtonP1.tintColor = .green
             
-            if allCorrectP2 {
+            if isP2Correct {
                 dismiss(animated: true)
             }
+            isP1Correct = true
         } else {
             doneButtonP1.tintColor = .red
+            isP1Correct = false
         }
-        allCorrectP1 = isEverythingCorrect
     }
     
     @objc func doneP2ButtonPressed(_ sender: Any) {
-        let firstAnswer = Int(firstTaskResultP2.text ?? "0")
-        
-        let isEverythingCorrect: Bool = {
-            if (firstAnswer == firstResultP1) { return true } else { return false }
-        }()
-        
-        if isEverythingCorrect {
-            doneButtonP2.tintColor = .green
-            
-            if allCorrectP1 {
-                dismiss(animated: true)
-            }
-        } else {
-            doneButtonP2.tintColor = .red
-        }
-        
-        allCorrectP2 = isEverythingCorrect
+//        let p2Answer = Int(firstTaskResultP2.text ?? "0")
+//
+//        let isEverythingCorrect: Bool = {
+//            if (firstAnswer == firstResultP1) { return true } else { return false }
+//        }()
+//
+//        if isEverythingCorrect {
+//            doneButtonP2.tintColor = .green
+//
+//            if isP1Correct {
+//                dismiss(animated: true)
+//            }
+//        } else {
+//            doneButtonP2.tintColor = .red
+//        }
+//
+//        isP2Correct = isEverythingCorrect
     }
     
-    func generateTasksP1 () {
-        let numbers = generateNumbers(8)
+    func generateTaskP1 () {
+        let firstNumber = generateNumber()
+        let secondNumber = generateNumber()
         
         switch firstOperator {
         case .zbrajanje:
-            firstResultP1 = numbers[0] + numbers[1]
+            firstResultP1 = firstNumber + secondNumber
         case .oduzimanje:
-            firstResultP1 = numbers[0] - numbers[1]
-        case .none:
-            break
-        }
-        switch secondOperator {
-        case .zbrajanje:
-            secondResultP1 = numbers[2] + numbers[3]
-        case .oduzimanje:
-            secondResultP1 = numbers[2] - numbers[3]
+            firstResultP1 = firstNumber - secondNumber
         case .none:
             break
         }
         
-        switch thirdOperator {
-        case .zbrajanje:
-            thirdResultP1 = numbers[4] + numbers[5]
-        case .oduzimanje:
-            thirdResultP1 = numbers[4] - numbers[5]
-        case .none:
-            break
-        }
+        let firstTask = "\(firstNumber) \(firstOperator!.rawValue) \(secondNumber) ="
         
-        switch fourthOperator {
-        case .zbrajanje:
-            fourthResultP1 = numbers[6] + numbers[7]
-        case .oduzimanje:
-            fourthResultP1 = numbers[6] - numbers[7]
-        case .none:
-            break
-        }
-        
-        let firstTask = "\(numbers[0]) \(firstOperator!.rawValue) \(numbers[1]) ="
-        let secondTask = "\(numbers[2]) \(secondOperator!.rawValue) \(numbers[3]) ="
-        let thirdTask = "\(numbers[4]) \(thirdOperator!.rawValue) \(numbers[5]) ="
-        let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
-        
-        firstTaskLabelP1.text = firstTask
-        
-        firstTaskLabelP1.setContentCompressionResistancePriority(.required, for: .horizontal)
+        p1TaskLabel.text = firstTask
     }
     
     func generateTasksP2() {
-        let numbers = generateNumbers(8)
-        
-        switch firstOperator {
-        case .zbrajanje:
-            firstResultP2 = numbers[0] + numbers[1]
-        case .oduzimanje:
-            firstResultP2 = numbers[0] - numbers[1]
-        case .none:
-            break
-        }
-        switch secondOperator {
-        case .zbrajanje:
-            secondResultP2 = numbers[2] + numbers[3]
-        case .oduzimanje:
-            secondResultP2 = numbers[2] - numbers[3]
-        case .none:
-            break
-        }
-        
-        switch thirdOperator {
-        case .zbrajanje:
-            thirdResultP2 = numbers[4] + numbers[5]
-        case .oduzimanje:
-            thirdResultP2 = numbers[4] - numbers[5]
-        case .none:
-            break
-        }
-        
-        switch fourthOperator {
-        case .zbrajanje:
-            fourthResultP2 = numbers[6] + numbers[7]
-        case .oduzimanje:
-            fourthResultP2 = numbers[6] - numbers[7]
-        case .none:
-            break
-        }
-        
-        let firstTask = "\(numbers[0]) \(firstOperator!.rawValue) \(numbers[1]) ="
-        let secondTask = "\(numbers[2]) \(secondOperator!.rawValue) \(numbers[3]) ="
-        let thirdTask = "\(numbers[4]) \(thirdOperator!.rawValue) \(numbers[5]) ="
-        let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
-        
-        firstTaskLabelP2.text = firstTask
+//        let numbers = generateNumbers(8)
+//
+//        switch firstOperator {
+//        case .zbrajanje:
+//            firstResultP2 = numbers[0] + numbers[1]
+//        case .oduzimanje:
+//            firstResultP2 = numbers[0] - numbers[1]
+//        case .none:
+//            break
+//        }
+//
+//        let firstTask = "\(numbers[0]) \(firstOperator!.rawValue) \(numbers[1]) ="
+//        let secondTask = "\(numbers[2]) \(secondOperator!.rawValue) \(numbers[3]) ="
+//        let thirdTask = "\(numbers[4]) \(thirdOperator!.rawValue) \(numbers[5]) ="
+//        let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
+//
+//        p2TaskLabel.text = firstTask
     }
     
     func generateTasksP3() {
-        let numbers = generateNumbers(8)
-        
-        switch firstOperator {
-        case .zbrajanje:
-            firstResultP3 = numbers[0] + numbers[1]
-        case .oduzimanje:
-            firstResultP3 = numbers[0] - numbers[1]
-        case .none:
-            break
-        }
-        switch secondOperator {
-        case .zbrajanje:
-            secondResultP3 = numbers[2] + numbers[3]
-        case .oduzimanje:
-            secondResultP3 = numbers[2] - numbers[3]
-        case .none:
-            break
-        }
-        
-        switch thirdOperator {
-        case .zbrajanje:
-            thirdResultP3 = numbers[4] + numbers[5]
-        case .oduzimanje:
-            thirdResultP3 = numbers[4] - numbers[5]
-        case .none:
-            break
-        }
-        
-        switch fourthOperator {
-        case .zbrajanje:
-            fourthResultP3 = numbers[6] + numbers[7]
-        case .oduzimanje:
-            fourthResultP3 = numbers[6] - numbers[7]
-        case .none:
-            break
-        }
-        
-        let firstTask = "\(numbers[0]) \(firstOperator!.rawValue) \(numbers[1]) ="
-        let secondTask = "\(numbers[2]) \(secondOperator!.rawValue) \(numbers[3]) ="
-        let thirdTask = "\(numbers[4]) \(thirdOperator!.rawValue) \(numbers[5]) ="
-        let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
-        
-        firstTaskLabelP3.text = firstTask
+//        let numbers = generateNumbers(8)
+//
+//        switch firstOperator {
+//        case .zbrajanje:
+//            firstResultP3 = numbers[0] + numbers[1]
+//        case .oduzimanje:
+//            firstResultP3 = numbers[0] - numbers[1]
+//        case .none:
+//            break
+//        }
+//        switch secondOperator {
+//        case .zbrajanje:
+//            secondResultP3 = numbers[2] + numbers[3]
+//        case .oduzimanje:
+//            secondResultP3 = numbers[2] - numbers[3]
+//        case .none:
+//            break
+//        }
+//
+//        switch thirdOperator {
+//        case .zbrajanje:
+//            thirdResultP3 = numbers[4] + numbers[5]
+//        case .oduzimanje:
+//            thirdResultP3 = numbers[4] - numbers[5]
+//        case .none:
+//            break
+//        }
+//
+//        switch fourthOperator {
+//        case .zbrajanje:
+//            fourthResultP3 = numbers[6] + numbers[7]
+//        case .oduzimanje:
+//            fourthResultP3 = numbers[6] - numbers[7]
+//        case .none:
+//            break
+//        }
+//
+//        let firstTask = "\(numbers[0]) \(firstOperator!.rawValue) \(numbers[1]) ="
+//        let secondTask = "\(numbers[2]) \(secondOperator!.rawValue) \(numbers[3]) ="
+//        let thirdTask = "\(numbers[4]) \(thirdOperator!.rawValue) \(numbers[5]) ="
+//        let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
+//
+//        p3TaskLabel.text = firstTask
     }
     
-    func generateNumbers(_ n: Int) -> [Int] {
-        return (0..<n).map { _ in .random(in: rangeMin...rangeMax) }
+    func generateNumber() -> Int {
+        return Int.random(in: rangeMin...rangeMax)
     }
     
     func rotateScreenPlayerOne() {
-        tasksP1.rotate(angle: 270)
-        keyboardP1.rotate(angle: 270)
+//        tasksP1.rotate(angle: 270)
+//        keyboardP1.rotate(angle: 270)
     }
     
     func configureP1Keyboard() {
@@ -371,49 +288,43 @@ class TestViewController: UIViewController {
     @objc func p1KeyboardAction(sender: UIButton) {
         guard let value = sender.titleLabel?.text else { return }
         
-        print(sender)
-        
-        if firstTaskResultP1.isEditing {
-            firstTaskResultP1.text! += value
-        }
+        p1ResultLabel.text! += value
     }
     
     @objc func deleteP1ButtonAction(sender: UIButton) {
-        if firstTaskResultP1.isEditing {
-            firstTaskResultP1.text = String(firstTaskResultP1.text!.dropLast())
-        }
+        p1ResultLabel.text = String(p1ResultLabel.text!.dropLast())
     }
     
     @objc func p2KeyboardAction(sender: UIButton) {
-        guard let value = sender.titleLabel?.text else { return }
-        
-        print(sender)
-        
-        if firstTaskResultP2.isEditing {
-            firstTaskResultP2.text! += value
-        }
+//        guard let value = sender.titleLabel?.text else { return }
+//
+//        print(sender)
+//
+//        if firstTaskResultP2.isEditing {
+//            firstTaskResultP2.text! += value
+//        }
     }
     
     @objc func deleteP2ButtonAction(sender: UIButton) {
-        if firstTaskResultP2.isEditing {
-            firstTaskResultP2.text = String(firstTaskResultP2.text!.dropLast())
-        }
+//        if firstTaskResultP2.isEditing {
+//            firstTaskResultP2.text = String(firstTaskResultP2.text!.dropLast())
+//        }
     }
     
     @objc func p3KeyboardAction(sender: UIButton) {
-        guard let value = sender.titleLabel?.text else { return }
-        
-        print(sender)
-        
-        if firstTastResultP3.isEditing {
-            firstTastResultP3.text! += value
-        }
+//        guard let value = sender.titleLabel?.text else { return }
+//
+//        print(sender)
+//
+//        if firstTastResultP3.isEditing {
+//            firstTastResultP3.text! += value
+//        }
     }
     
     @objc func deleteP3ButtonAction(sender: UIButton) {
-        if firstTastResultP3.isEditing {
-            firstTastResultP3.text = String(firstTastResultP3.text!.dropLast())
-        }
+//        if firstTastResultP3.isEditing {
+//            firstTastResultP3.text = String(firstTastResultP3.text!.dropLast())
+//        }
     }
 }
 
