@@ -23,6 +23,9 @@ enum Operacije: String, CaseIterable {
 // MARK: - TEST VIEW CONTROLLER
 class TestViewController: UIViewController {
     
+    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var upperStackView: UIStackView!
+    
     // MARK: - Player Views Outlets
     @IBOutlet weak var p1View: UIView!
     @IBOutlet weak var p2View: UIView!
@@ -119,6 +122,21 @@ class TestViewController: UIViewController {
     // MARK: - Class lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if brojIgraca != 4 {
+            mainStackView.removeArrangedSubview(p4View)
+            p4View.removeFromSuperview()
+            
+            if brojIgraca != 3 {
+                mainStackView.removeArrangedSubview(p3View)
+                p3View.removeFromSuperview()
+                
+                if brojIgraca != 2 {
+                    mainStackView.removeArrangedSubview(upperStackView)
+                    upperStackView.removeFromSuperview()
+                }
+            }
+        }
         
         p2View.rotate(angle:180)
         p3View.rotate(angle: 180)
@@ -324,7 +342,7 @@ class TestViewController: UIViewController {
     }
     
     @objc func deleteP3ButtonAction(sender: UIButton) {
-        p2ResultLabel.text = String(p2ResultLabel.text!.dropLast())
+        p2ResultLabel.text = String(p3ResultLabel.text!.dropLast())
     }
     
     @objc func p4KeyboardAction(sender: UIButton) {
