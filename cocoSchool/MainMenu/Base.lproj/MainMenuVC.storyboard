@@ -18,37 +18,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CO | CO Learning" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U7-Mq-nUU">
-                                <rect key="frame" x="60" y="124" width="904" height="143.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="60" y="124" width="904" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="70"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="203" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-pR-Xhu">
-                                <rect key="frame" x="330" y="467.5" width="364" height="578.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-pR-Xhu">
+                                <rect key="frame" x="372.5" y="408" width="279.5" height="638"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao1-Zq-xca">
-                                        <rect key="frame" x="69" y="0.0" width="226" height="188"/>
+                                        <rect key="frame" x="50" y="0.0" width="179" height="244"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="START" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="70"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="START">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="HelveticaNeue-Medium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgc-q4-RsV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="568-WE-JNX">
-                                        <rect key="frame" x="4.5" y="391" width="355" height="187.5"/>
+                                        <rect key="frame" x="0.0" y="394" width="279.5" height="244"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="POSTAVKE" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="70"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="POSTAVKE">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="HelveticaNeue-Medium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="pushSettingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOe-pX-QfD"/>
@@ -63,10 +71,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2U7-Mq-nUU" secondAttribute="trailing" constant="60" id="12o-vy-xAC"/>
                             <constraint firstItem="2U7-Mq-nUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3E8-Q4-GwL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vu7-pR-Xhu" secondAttribute="bottom" constant="300" id="6Pe-NK-vj5"/>
-                            <constraint firstItem="vu7-pR-Xhu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="330" id="Jtf-oD-eCh"/>
+                            <constraint firstItem="vu7-pR-Xhu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TUM-Dn-Aa2"/>
                             <constraint firstItem="2U7-Mq-nUU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2c-aJ-8vJ"/>
                             <constraint firstItem="2U7-Mq-nUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="g5y-Ml-e0w"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vu7-pR-Xhu" secondAttribute="trailing" constant="330" id="v5M-0x-STs"/>
                             <constraint firstItem="vu7-pR-Xhu" firstAttribute="top" secondItem="2U7-Mq-nUU" secondAttribute="bottom" constant="200" id="vW2-Bu-F8T"/>
                         </constraints>
                     </view>
