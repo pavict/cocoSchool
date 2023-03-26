@@ -33,39 +33,21 @@ class TestViewController: UIViewController {
     
     // PLAYER ONE LABELS
     @IBOutlet weak var firstTaskLabelP1: UILabel!
-    @IBOutlet weak var secondTaskLabelP1: UILabel!
-    @IBOutlet weak var thirdTaskLabelP1: UILabel!
-    @IBOutlet weak var fourthTaskLabelP1: UILabel!
     
     // PLAYER TWO LABELS
     @IBOutlet weak var firstTaskLabelP2: UILabel!
-    @IBOutlet weak var secondTaskLabelP2: UILabel!
-    @IBOutlet weak var thirdTaskLabelP2: UILabel!
-    @IBOutlet weak var fourthTaskLabelP2: UILabel!
     
     // PLAYER THREE LABELS
     @IBOutlet weak var firstTaskLabelP3: UILabel!
-    @IBOutlet weak var secondTaskLabelP3: UILabel!
-    @IBOutlet weak var thirdTaskLabelP3: UILabel!
-    @IBOutlet weak var fourthTaskLabelP3: UILabel!
     
     // PLAYER ONE TEXTFIELDS
     @IBOutlet weak var firstTaskResultP1: UITextField!
-    @IBOutlet weak var secondTaskResultP1: UITextField!
-    @IBOutlet weak var thirdTaskResultP1: UITextField!
-    @IBOutlet weak var fourthTaskResultP1: UITextField!
     
     // PLAYER TWO TEXTFIELDS
     @IBOutlet weak var firstTaskResultP2: UITextField!
-    @IBOutlet weak var secondTaskResultP2: UITextField!
-    @IBOutlet weak var thirdTaskResultP2: UITextField!
-    @IBOutlet weak var fourthTaskResultP2: UITextField!
     
     // PLAYER THREE TEXTFIELDS
     @IBOutlet weak var firstTastResultP3: UITextField!
-    @IBOutlet weak var secondTastResultP3: UITextField!
-    @IBOutlet weak var thirdTaskResultP3: UITextField!
-    @IBOutlet weak var fourthTaskResultP3: UITextField!
     
     // PLAYER ONE KEYBOARD
     @IBOutlet weak var numberOneP1: UIButton!
@@ -155,12 +137,9 @@ class TestViewController: UIViewController {
     @objc func doneP1ButtonPressed(_ sender: Any) {
         
         let firstAnswer = Int(firstTaskResultP1.text ?? "0")
-        let secondAnswer = Int(secondTaskResultP1.text ?? "0")
-        let thirdAnswer = Int(thirdTaskResultP1.text ?? "0")
-        let fourthAnswer = Int(fourthTaskResultP1.text ?? "0")
         
         let isEverythingCorrect: Bool = {
-            if (firstAnswer == firstResultP1 && secondAnswer == secondResultP1 && thirdAnswer == thirdResultP1 && fourthAnswer == fourthResultP1) { return true } else { return false }
+            if (firstAnswer == firstResultP1) { return true } else { return false }
         }()
         
         if isEverythingCorrect {
@@ -177,12 +156,9 @@ class TestViewController: UIViewController {
     
     @objc func doneP2ButtonPressed(_ sender: Any) {
         let firstAnswer = Int(firstTaskResultP2.text ?? "0")
-        let secondAnswer = Int(secondTaskResultP2.text ?? "0")
-        let thirdAnswer = Int(thirdTaskResultP2.text ?? "0")
-        let fourthAnswer = Int(fourthTaskResultP2.text ?? "0")
         
         let isEverythingCorrect: Bool = {
-            if (firstAnswer == firstResultP1 && secondAnswer == secondResultP1 && thirdAnswer == thirdResultP1 && fourthAnswer == fourthResultP1) { return true } else { return false }
+            if (firstAnswer == firstResultP1) { return true } else { return false }
         }()
         
         if isEverythingCorrect {
@@ -242,9 +218,6 @@ class TestViewController: UIViewController {
         let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
         
         firstTaskLabelP1.text = firstTask
-        secondTaskLabelP1.text = secondTask
-        thirdTaskLabelP1.text = thirdTask
-        fourthTaskLabelP1.text = fourthTask
         
         firstTaskLabelP1.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
@@ -293,9 +266,6 @@ class TestViewController: UIViewController {
         let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
         
         firstTaskLabelP2.text = firstTask
-        secondTaskLabelP2.text = secondTask
-        thirdTaskLabelP2.text = thirdTask
-        fourthTaskLabelP2.text = fourthTask
     }
     
     func generateTasksP3() {
@@ -342,13 +312,10 @@ class TestViewController: UIViewController {
         let fourthTask = "\(numbers[6]) \(fourthOperator!.rawValue) \(numbers[7]) ="
         
         firstTaskLabelP3.text = firstTask
-        secondTaskLabelP3.text = secondTask
-        thirdTaskLabelP3.text = thirdTask
-        fourthTaskLabelP3.text = fourthTask
     }
     
     func generateNumbers(_ n: Int) -> [Int] {
-        return (0..<n).map { _ in .random(in: 1...range) }
+        return (0..<n).map { _ in .random(in: rangeMin...rangeMax) }
     }
     
     func rotateScreenPlayerOne() {
@@ -409,29 +376,11 @@ class TestViewController: UIViewController {
         if firstTaskResultP1.isEditing {
             firstTaskResultP1.text! += value
         }
-        if secondTaskResultP1.isEditing {
-            secondTaskResultP1.text! += value
-        }
-        if thirdTaskResultP1.isEditing {
-            thirdTaskResultP1.text! += value
-        }
-        if fourthTaskResultP1.isEditing {
-            fourthTaskResultP1.text! += value
-        }
     }
     
     @objc func deleteP1ButtonAction(sender: UIButton) {
         if firstTaskResultP1.isEditing {
             firstTaskResultP1.text = String(firstTaskResultP1.text!.dropLast())
-        }
-        if secondTaskResultP1.isEditing {
-            secondTaskResultP1.text = String(secondTaskResultP1.text!.dropLast())
-        }
-        if thirdTaskResultP1.isEditing {
-            thirdTaskResultP1.text = String(thirdTaskResultP1.text!.dropLast())
-        }
-        if fourthTaskResultP1.isEditing {
-            fourthTaskResultP1.text = String(fourthTaskResultP1.text!.dropLast())
         }
     }
     
@@ -443,29 +392,11 @@ class TestViewController: UIViewController {
         if firstTaskResultP2.isEditing {
             firstTaskResultP2.text! += value
         }
-        if secondTaskResultP2.isEditing {
-            secondTaskResultP2.text! += value
-        }
-        if thirdTaskResultP2.isEditing {
-            thirdTaskResultP2.text! += value
-        }
-        if fourthTaskResultP2.isEditing {
-            fourthTaskResultP2.text! += value
-        }
     }
     
     @objc func deleteP2ButtonAction(sender: UIButton) {
         if firstTaskResultP2.isEditing {
             firstTaskResultP2.text = String(firstTaskResultP2.text!.dropLast())
-        }
-        if secondTaskResultP2.isEditing {
-            secondTaskResultP2.text = String(secondTaskResultP2.text!.dropLast())
-        }
-        if thirdTaskResultP2.isEditing {
-            thirdTaskResultP2.text = String(thirdTaskResultP2.text!.dropLast())
-        }
-        if fourthTaskResultP2.isEditing {
-            fourthTaskResultP2.text = String(fourthTaskResultP2.text!.dropLast())
         }
     }
     
@@ -477,29 +408,11 @@ class TestViewController: UIViewController {
         if firstTastResultP3.isEditing {
             firstTastResultP3.text! += value
         }
-        if secondTastResultP3.isEditing {
-            secondTastResultP3.text! += value
-        }
-        if thirdTaskResultP3.isEditing {
-            thirdTaskResultP3.text! += value
-        }
-        if fourthTaskResultP3.isEditing {
-            fourthTaskResultP2.text! += value
-        }
     }
     
     @objc func deleteP3ButtonAction(sender: UIButton) {
         if firstTastResultP3.isEditing {
             firstTastResultP3.text = String(firstTastResultP3.text!.dropLast())
-        }
-        if secondTastResultP3.isEditing {
-            secondTastResultP3.text = String(secondTastResultP3.text!.dropLast())
-        }
-        if thirdTaskResultP3.isEditing {
-            thirdTaskResultP3.text = String(thirdTaskResultP3.text!.dropLast())
-        }
-        if fourthTaskResultP3.isEditing {
-            fourthTaskResultP3.text = String(fourthTaskResultP3.text!.dropLast())
         }
     }
 }
