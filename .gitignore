@@ -1,0 +1,38 @@
+# Xcode
+.DS_Store
+*.xcuserdata
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+*.swp
+*.lock
+
+# Build artifacts
+build/
+DerivedData/
+*.o
+*.a
+*.lo
+*.la
+*.al
+*.so
+*.dylib
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~ 
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Xcode project/workspace data
+xcuserdata/
+*.xcworkspace
+!default.xcworkspace
+*.xcuserdatad
+
+# Additional user-specific files
+*.orig

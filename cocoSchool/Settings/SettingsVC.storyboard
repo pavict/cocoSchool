@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Regular.ttf">
+            <string>Comfortaa-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="cocoSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zuf-7x-JID">
+                                <rect key="frame" x="20" y="40" width="644" height="708"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-iQ-W7c">
+                                        <rect key="frame" x="0.0" y="0.0" width="644" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0YN-6i-upr">
+                                                <rect key="frame" x="20" y="10" width="604" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broj učenika" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-6g-hui">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="50"/>
+                                                        <color key="tintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                        <color key="textColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VE4-LX-aSJ">
+                                                        <rect key="frame" x="344" y="0.0" width="260" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-OQ-UKj" customClass="RadioButton" customModule="cocoSchool" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="MpH-Ve-fQ6"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="Vmg-L1-JTn"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-08-Y4P" customClass="RadioButton" customModule="cocoSchool" customModuleProvider="target">
+                                                                <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="cLy-A8-TOO"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="h7N-vG-CNk"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPx-Us-1XS" customClass="RadioButton" customModule="cocoSchool" customModuleProvider="target">
+                                                                <rect key="frame" x="140" y="0.0" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="Ec0-nP-JgV"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="ZZ1-Mo-QFn"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKp-oJ-u1s" customClass="RadioButton" customModule="cocoSchool" customModuleProvider="target">
+                                                                <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="3SN-Lc-WfZ"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="7HN-xP-RIp"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GLa-qE-clW"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.89803921568627454" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="0YN-6i-upr" secondAttribute="bottom" constant="10" id="JQf-4p-f8n"/>
+                                            <constraint firstAttribute="trailing" secondItem="0YN-6i-upr" secondAttribute="trailing" constant="20" id="g21-5K-ryk"/>
+                                            <constraint firstItem="0YN-6i-upr" firstAttribute="leading" secondItem="Zxk-iQ-W7c" secondAttribute="leading" constant="20" id="jsr-7Q-LoF"/>
+                                            <constraint firstItem="0YN-6i-upr" firstAttribute="top" secondItem="Zxk-iQ-W7c" secondAttribute="top" constant="10" id="lrH-N8-Wxb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdd-w5-1u4">
+                                        <rect key="frame" x="0.0" y="90" width="644" height="618"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raspon brojeva" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oL-jo-18L">
+                                                <rect key="frame" x="20" y="20" width="201" height="28"/>
+                                                <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-Dw-oJV">
+                                                <rect key="frame" x="20" y="104" width="604" height="433"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Zjv-aI-C0y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="292" height="433"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prvi operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-2R-Zg9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="28"/>
+                                                                <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-ge-WGB">
+                                                                <rect key="frame" x="0.0" y="52" width="200" height="70"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upišite najmanji operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-OX-9Hf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="17"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eio-9X-WR4">
+                                                                        <rect key="frame" x="0.0" y="25" width="200" height="45"/>
+                                                                        <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="GHO-f8-zMU"/>
+                                                                            <constraint firstAttribute="width" constant="200" id="YvY-DN-cUl"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="firstOperatorMinChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="mQE-id-3Oo"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tPY-SK-0Ve">
+                                                                <rect key="frame" x="0.0" y="146" width="200" height="70"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upišite najveći operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STf-V3-W6t">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="17"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Q5-cSN">
+                                                                        <rect key="frame" x="0.0" y="25" width="200" height="45"/>
+                                                                        <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="200" id="Uwy-hS-h6D"/>
+                                                                            <constraint firstAttribute="height" constant="45" id="mI6-Mh-xFR"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="firstOperatorMaxChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Mz9-d5-arz"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fmE-6h-qMs">
+                                                                <rect key="frame" x="0.0" y="240" width="230" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upiši konstantu" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiB-P5-Mzq">
+                                                                        <rect key="frame" x="0.0" y="14" width="161" height="22.5"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lz4-1W-ss4">
+                                                                        <rect key="frame" x="181" y="9.5" width="51" height="31"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="onTintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="firstConstantValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="4Ap-2v-YnW"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="jQu-iG-A5E"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rum-d3-kge">
+                                                                <rect key="frame" x="0.0" y="314" width="200" height="45"/>
+                                                                <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="200" id="PSf-rZ-ntz"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="xev-hu-MqT"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="haW-cE-RoH">
+                                                                <rect key="frame" x="0.0" y="383" width="284" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zaokruži na desetice" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbR-6t-TDt">
+                                                                        <rect key="frame" x="0.0" y="14" width="215" height="22.5"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-oq-vBe">
+                                                                        <rect key="frame" x="235" y="9.5" width="51" height="31"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="onTintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </switch>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="Dj9-Vt-meX"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-Dh-z6m">
+                                                        <rect key="frame" x="312" y="0.0" width="292" height="433"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drugi operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kx1-69-HFq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="191.5" height="28"/>
+                                                                <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-Hi-6wW">
+                                                                <rect key="frame" x="0.0" y="52" width="200" height="70"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upišite najmanji operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81G-a7-4vS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="17"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-yl-vpM">
+                                                                        <rect key="frame" x="0.0" y="25" width="200" height="45"/>
+                                                                        <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="nur-U2-N1j"/>
+                                                                            <constraint firstAttribute="width" constant="200" id="wxn-IR-4I7"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="secondOperatorMinChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="crk-QV-XgN"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-rp-p9F">
+                                                                <rect key="frame" x="0.0" y="146" width="200" height="70"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upišite najveći operand" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCL-EP-Mm7">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="17"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUd-qz-g1g">
+                                                                        <rect key="frame" x="0.0" y="25" width="200" height="45"/>
+                                                                        <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="200" id="NrL-lq-4pF"/>
+                                                                            <constraint firstAttribute="height" constant="45" id="PX8-Qd-w14"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="secondOperatorMaxChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="3KC-Ni-f1s"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n2Z-Xi-epY">
+                                                                <rect key="frame" x="0.0" y="240" width="230" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upiši konstantu" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qv0-h9-XOn">
+                                                                        <rect key="frame" x="0.0" y="14" width="161" height="22.5"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddO-I7-XRu">
+                                                                        <rect key="frame" x="181" y="9.5" width="51" height="31"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="onTintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="secondConstantValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="GM9-CB-WRo"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="0xT-S8-HtJ"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d8q-Om-Rvb">
+                                                                <rect key="frame" x="0.0" y="314" width="200" height="45"/>
+                                                                <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="2yY-N7-bet"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="CEo-QD-Sin"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-3w-TqG">
+                                                                <rect key="frame" x="0.0" y="383" width="284" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zaokruži na desetice" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flW-lH-i3D">
+                                                                        <rect key="frame" x="0.0" y="14" width="215" height="22.5"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSk-xc-CFh">
+                                                                        <rect key="frame" x="235" y="9.5" width="51" height="31"/>
+                                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="onTintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </switch>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="620-i3-o5z"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6am-rE-RNt">
+                                                <rect key="frame" x="20" y="567" width="372.5" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prvi operand veći od drugog" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkb-GY-o5i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUo-zK-h7V">
+                                                        <rect key="frame" x="323.5" y="0.0" width="51" height="31"/>
+                                                        <color key="tintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="onTintColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.8980392157" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6am-rE-RNt" firstAttribute="top" secondItem="c8b-Dw-oJV" secondAttribute="bottom" constant="30" id="BtY-mc-HuU"/>
+                                            <constraint firstItem="c8b-Dw-oJV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7oL-jo-18L" secondAttribute="bottom" constant="20" id="E15-cw-Pxi"/>
+                                            <constraint firstAttribute="trailing" secondItem="c8b-Dw-oJV" secondAttribute="trailing" constant="20" symbolic="YES" id="Io7-bz-Ysw"/>
+                                            <constraint firstItem="7oL-jo-18L" firstAttribute="leading" secondItem="Tdd-w5-1u4" secondAttribute="leading" constant="20" id="Mgm-70-JNw"/>
+                                            <constraint firstItem="c8b-Dw-oJV" firstAttribute="leading" secondItem="Tdd-w5-1u4" secondAttribute="leading" constant="20" symbolic="YES" id="e9c-xl-Bt3"/>
+                                            <constraint firstAttribute="bottom" secondItem="6am-rE-RNt" secondAttribute="bottom" constant="20" id="gRb-ed-uve"/>
+                                            <constraint firstItem="6am-rE-RNt" firstAttribute="leading" secondItem="Tdd-w5-1u4" secondAttribute="leading" constant="20" id="lpc-B1-zKM"/>
+                                            <constraint firstItem="7oL-jo-18L" firstAttribute="top" secondItem="Tdd-w5-1u4" secondAttribute="top" constant="20" id="weH-h5-era"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ytX-pL-hhY">
+                                <rect key="frame" x="684" y="40" width="320" height="708"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRB-aE-w7c">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trajanje" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMX-jM-POJ">
+                                                <rect key="frame" x="50" y="30" width="102" height="28"/>
+                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                <color key="textColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="saW-I6-YSl">
+                                                <rect key="frame" x="50" y="108" width="173" height="45"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-G6-Llr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                                        <color key="backgroundColor" red="0.72549019607843135" green="0.77647058823529413" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="LpV-XT-KBi"/>
+                                                            <constraint firstAttribute="width" constant="100" id="yQq-34-2rA"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="timeTextFieldChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="8bh-OE-Hly"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c0-Jd-veK">
+                                                        <rect key="frame" x="125" y="0.0" width="48" height="45"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                        <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.89803921568627454" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="zMX-jM-POJ" firstAttribute="leading" secondItem="PRB-aE-w7c" secondAttribute="leading" constant="50" id="9ax-LI-0UM"/>
+                                            <constraint firstItem="saW-I6-YSl" firstAttribute="top" secondItem="zMX-jM-POJ" secondAttribute="bottom" constant="50" id="Khw-1a-taY"/>
+                                            <constraint firstItem="saW-I6-YSl" firstAttribute="leading" secondItem="PRB-aE-w7c" secondAttribute="leading" constant="50" id="Kuj-Cg-0mQ"/>
+                                            <constraint firstAttribute="height" constant="200" id="MfK-m5-xF1"/>
+                                            <constraint firstItem="zMX-jM-POJ" firstAttribute="top" secondItem="PRB-aE-w7c" secondAttribute="top" constant="30" id="edV-Cc-9GD"/>
+                                            <constraint firstAttribute="width" constant="320" id="mev-NL-ezH"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n8-xX-Lr9">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="388"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s78-WA-Q2o">
+                                                <rect key="frame" x="20" y="20" width="280" height="348"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="vMC-OU-G4H">
+                                                        <rect key="frame" x="3" y="0.0" width="274" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zbrajanje" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4F-p9-Sg4">
+                                                                <rect key="frame" x="0.0" y="11" width="125" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-0R-bgh">
+                                                                <rect key="frame" x="225" y="9.5" width="51" height="31"/>
+                                                                <color key="tintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="onTintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="zbrajanjeSwitched:" destination="Y6W-OH-hqX" eventType="valueChanged" id="gyO-Qa-dcN"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="k8a-Ti-Hhd"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Krw-Jd-g2P">
+                                                        <rect key="frame" x="1.5" y="99.5" width="277" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oduzimanje" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-3T-gMn">
+                                                                <rect key="frame" x="0.0" y="11" width="158" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05m-9Q-L2X">
+                                                                <rect key="frame" x="228" y="9.5" width="51" height="31"/>
+                                                                <color key="onTintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="oduzimanjeSwitched:" destination="Y6W-OH-hqX" eventType="valueChanged" id="zXD-du-4Xk"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Gda-EH-ncR"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="oYI-90-5De">
+                                                        <rect key="frame" x="3" y="198.5" width="274.5" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Množenje" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-XH-QdU">
+                                                                <rect key="frame" x="0.0" y="11" width="125.5" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNz-nl-f6s">
+                                                                <rect key="frame" x="225.5" y="9.5" width="51" height="31"/>
+                                                                <color key="onTintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="mnozenjeSwitched:" destination="Y6W-OH-hqX" eventType="valueChanged" id="pqy-Ds-rAg"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="cJe-y9-3Y4"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-OS-aGf">
+                                                        <rect key="frame" x="3" y="298" width="274" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dijeljenje" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-Uv-UN4">
+                                                                <rect key="frame" x="0.0" y="11" width="115" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="25"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e8-m9-UCi">
+                                                                <rect key="frame" x="225" y="9.5" width="51" height="31"/>
+                                                                <color key="onTintColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="dijeljenjeSwitched:" destination="Y6W-OH-hqX" eventType="valueChanged" id="FF1-zQ-t04"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Kd0-OV-8oI"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.89803921568627454" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="s78-WA-Q2o" firstAttribute="leading" secondItem="7n8-xX-Lr9" secondAttribute="leading" constant="20" id="9j3-mC-sVx"/>
+                                            <constraint firstAttribute="width" constant="320" id="caH-Sc-ieO"/>
+                                            <constraint firstAttribute="trailing" secondItem="s78-WA-Q2o" secondAttribute="trailing" constant="20" id="ktJ-6I-w4D"/>
+                                            <constraint firstItem="s78-WA-Q2o" firstAttribute="top" secondItem="7n8-xX-Lr9" secondAttribute="top" constant="20" id="lTx-Ng-wXg"/>
+                                            <constraint firstAttribute="bottom" secondItem="s78-WA-Q2o" secondAttribute="bottom" constant="20" id="mId-Dy-VLD"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-Lh-1vX">
+                                        <rect key="frame" x="0.0" y="628" width="320" height="80"/>
+                                        <color key="backgroundColor" red="0.89411764709999997" green="0.2274509804" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="acE-G8-e4T"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="35"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="POTVRDI"/>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pvn-mP-Ot6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zuf-7x-JID" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Kav-Ae-0ei"/>
+                            <constraint firstItem="ytX-pL-hhY" firstAttribute="leading" secondItem="Zuf-7x-JID" secondAttribute="trailing" constant="20" id="WSt-bi-7C4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zuf-7x-JID" secondAttribute="bottom" constant="20" id="exJ-XR-07M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ytX-pL-hhY" secondAttribute="bottom" constant="20" id="j9v-TA-dAJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ytX-pL-hhY" secondAttribute="trailing" constant="20" id="l0V-ZF-FiM"/>
+                            <constraint firstItem="Zuf-7x-JID" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="q5h-cn-Zkm"/>
+                            <constraint firstItem="ytX-pL-hhY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="upf-Yp-CWT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="5EZ-qb-Rvc" id="NgS-ll-kba"/>
+                        <outlet property="dijeljenjeSwitch" destination="6e8-m9-UCi" id="jm6-td-uQL"/>
+                        <outlet property="firstOperatorConstantSwitch" destination="Lz4-1W-ss4" id="6bt-hB-HG6"/>
+                        <outlet property="firstOperatorConstantTextField" destination="rum-d3-kge" id="OXF-bA-t7i"/>
+                        <outlet property="firstOperatorGreaterSwitch" destination="MUo-zK-h7V" id="Zhy-tV-73o"/>
+                        <outlet property="firstOperatorMaxTextField" destination="ff3-Q5-cSN" id="Sel-t8-3lM"/>
+                        <outlet property="firstOperatorMinTextField" destination="eio-9X-WR4" id="zqQ-uu-Rf0"/>
+                        <outlet property="fourPlayersButton" destination="VKp-oJ-u1s" id="gNf-bP-RaU"/>
+                        <outlet property="mnozenjeSwitch" destination="oNz-nl-f6s" id="Kzb-MF-f8z"/>
+                        <outlet property="oduzimanjeSwitch" destination="05m-9Q-L2X" id="Sv6-K4-mqy"/>
+                        <outlet property="onePlayerButton" destination="O3x-OQ-UKj" id="UJK-h2-FOf"/>
+                        <outlet property="operatorsView" destination="7n8-xX-Lr9" id="DQw-1n-l8d"/>
+                        <outlet property="playerNumberView" destination="Zxk-iQ-W7c" id="W4u-hh-RxF"/>
+                        <outlet property="potvrdiButton" destination="LzW-Lh-1vX" id="SRJ-ps-n9E"/>
+                        <outlet property="rasponView" destination="Tdd-w5-1u4" id="kbQ-6S-nt3"/>
+                        <outlet property="secondOperatorConstantSwitch" destination="ddO-I7-XRu" id="3yk-Jd-k35"/>
+                        <outlet property="secondOperatorConstantTextField" destination="d8q-Om-Rvb" id="iYF-Vb-I8j"/>
+                        <outlet property="secondOperatorMaxTextField" destination="VUd-qz-g1g" id="XtN-bf-Eo0"/>
+                        <outlet property="secondOperatorMinTextField" destination="Khd-yl-vpM" id="36h-by-5ps"/>
+                        <outlet property="shouldFirstOperatorRoundUp" destination="NHw-oq-vBe" id="jct-OI-Xg5"/>
+                        <outlet property="shouldSecondOperatorRoundUp" destination="bSk-xc-CFh" id="ryR-af-7dY"/>
+                        <outlet property="threePlayersButton" destination="LPx-Us-1XS" id="xqV-HO-oOH"/>
+                        <outlet property="timeTextField" destination="l9F-G6-Llr" id="Wag-aa-izH"/>
+                        <outlet property="timeView" destination="PRB-aE-w7c" id="RWN-ej-lXW"/>
+                        <outlet property="twoPlayersButton" destination="jRa-08-Y4P" id="x4F-v3-Ncu"/>
+                        <outlet property="zbrajanjeSwitch" destination="tfg-0R-bgh" id="yTY-Ib-SUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.90625" y="-2.34375"/>
+        </scene>
+    </scenes>
+</document>

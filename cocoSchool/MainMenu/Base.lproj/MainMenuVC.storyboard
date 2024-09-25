@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWB-r2-jPA">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </array>
+        <array key="Comfortaa-Regular.ttf">
+            <string>Comfortaa-Regular</string>
+        </array>
+        <array key="Comfortaa-SemiBold.ttf">
+            <string>Comfortaa-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="cocoSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B o k !" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U7-Mq-nUU">
+                                <rect key="frame" x="60" y="224" width="1246" height="78.5"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="70"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao1-Zq-xca">
+                                <rect key="frame" x="483" y="386" width="400" height="120"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.22745098039215686" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="p0r-R0-FAO"/>
+                                    <constraint firstAttribute="width" constant="400" id="sbO-Ct-JTU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="50"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="P O K R E N I"/>
+                                <connections>
+                                    <action selector="startGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgc-q4-RsV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="568-WE-JNX">
+                                <rect key="frame" x="1246" y="884" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5gu-jj-dGB"/>
+                                    <constraint firstAttribute="width" constant="100" id="gAl-wj-xev"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Settings"/>
+                                <connections>
+                                    <action selector="pushSettingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOe-pX-QfD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dobrodošli u CoCo aplikaciju!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qun-ET-0gT">
+                                <rect key="frame" x="60" y="322.5" width="1246" height="33.5"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainImage" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-g7-Jvd">
+                                <rect key="frame" x="0.0" y="707" width="437" height="277"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="277" id="LXw-iv-ORg"/>
+                                    <constraint firstAttribute="width" constant="437" id="S0Q-Vq-IF8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecondMainImage" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-7i-pQI">
+                                <rect key="frame" x="1020" y="99" width="346" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="oys-iI-4Re"/>
+                                    <constraint firstAttribute="height" constant="173" id="rXT-I2-i4T"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-mU-esA">
+                                <rect key="frame" x="10" y="84" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="KXC-PS-HUh"/>
+                                    <constraint firstAttribute="height" constant="40" id="e0z-Cn-YFu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trenutne postavke:" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT3-Zm-QYE">
+                                <rect key="frame" x="993" y="896" width="245" height="28"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="25"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broj učenika: 4 | Trajanje: 10 min | Operateri: + - * %" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kA-eE-aT1">
+                                <rect key="frame" x="847.5" y="932" width="390.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prvi operand: od 1 do 100 | Drugi operand: 10" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCA-gg-byH">
+                                <rect key="frame" x="894" y="957" width="344" height="17"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-SemiBold" family="Comfortaa" pointSize="15"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.72549019607843135" green="0.77647058823529413" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2U7-Mq-nUU" secondAttribute="trailing" constant="60" id="12o-vy-xAC"/>
+                            <constraint firstItem="2U7-Mq-nUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3E8-Q4-GwL"/>
+                            <constraint firstItem="568-WE-JNX" firstAttribute="leading" secondItem="0kA-eE-aT1" secondAttribute="trailing" constant="8" symbolic="YES" id="8Rk-nD-6Op"/>
+                            <constraint firstItem="PEz-g7-Jvd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8k6-lc-NY0"/>
+                            <constraint firstItem="qun-ET-0gT" firstAttribute="top" secondItem="2U7-Mq-nUU" secondAttribute="bottom" constant="20" id="9hb-fL-lq5"/>
+                            <constraint firstItem="568-WE-JNX" firstAttribute="leading" secondItem="pCA-gg-byH" secondAttribute="trailing" constant="8" symbolic="YES" id="EDW-du-cWb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PEz-g7-Jvd" secondAttribute="bottom" constant="20" id="EPT-04-TkJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PEz-g7-Jvd" secondAttribute="bottom" constant="20" id="Fjr-9q-PQa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qun-ET-0gT" secondAttribute="trailing" constant="60" id="GpX-2o-8yp"/>
+                            <constraint firstItem="PEz-g7-Jvd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMU-hr-fHc"/>
+                            <constraint firstItem="qun-ET-0gT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="TWR-C1-YX6"/>
+                            <constraint firstItem="0kA-eE-aT1" firstAttribute="top" secondItem="xT3-Zm-QYE" secondAttribute="bottom" constant="8" symbolic="YES" id="U13-0w-sbT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="568-WE-JNX" secondAttribute="trailing" constant="20" id="U1E-GX-mwO"/>
+                            <constraint firstItem="2U7-Mq-nUU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="V2c-aJ-8vJ"/>
+                            <constraint firstItem="Ao1-Zq-xca" firstAttribute="top" secondItem="qun-ET-0gT" secondAttribute="bottom" constant="30" id="WQn-Xw-8jv"/>
+                            <constraint firstItem="f1H-mU-esA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="be1-qv-TkP"/>
+                            <constraint firstItem="568-WE-JNX" firstAttribute="leading" secondItem="xT3-Zm-QYE" secondAttribute="trailing" constant="8" symbolic="YES" id="fMg-Rq-Atk"/>
+                            <constraint firstItem="2U7-Mq-nUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="g5y-Ml-e0w"/>
+                            <constraint firstItem="sfr-7i-pQI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="jBM-2Q-p2J"/>
+                            <constraint firstItem="f1H-mU-esA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lAO-cD-PTU"/>
+                            <constraint firstItem="sfr-7i-pQI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nVW-3f-QCA"/>
+                            <constraint firstItem="pCA-gg-byH" firstAttribute="top" secondItem="0kA-eE-aT1" secondAttribute="bottom" constant="8" symbolic="YES" id="nzK-LJ-vYq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="568-WE-JNX" secondAttribute="bottom" constant="20" id="wRs-rj-Hmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pCA-gg-byH" secondAttribute="bottom" constant="30" id="y4d-oV-4Dr"/>
+                            <constraint firstItem="Ao1-Zq-xca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zS6-E9-pPq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qxk-qN-aSm"/>
+                    <connections>
+                        <outlet property="firstSettingsLabel" destination="0kA-eE-aT1" id="6p6-3B-BOm"/>
+                        <outlet property="secondSettingsLabel" destination="pCA-gg-byH" id="RoM-OJ-X6d"/>
+                        <outlet property="settingsButton" destination="568-WE-JNX" id="irX-yc-PQb"/>
+                        <outlet property="startButton" destination="Ao1-Zq-xca" id="YIb-sn-hjC"/>
+                        <segue destination="T3E-di-zfN" kind="show" identifier="showTest" id="rn4-mA-lRx"/>
+                        <segue destination="VDD-fo-h8F" kind="show" identifier="showSettings" id="pjS-Rz-pxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745.82723279648599" y="80.859375"/>
+        </scene>
+        <!--NameInputVC-->
+        <scene sceneID="KUD-Nm-itR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NameInputVC" storyboardName="NameInputVC" id="T3E-di-zfN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OKD-tF-WWC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXD-He-Or6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296.6325036603221" y="-61.523437499999993"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="I7b-rU-SCh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SettingsVC" storyboardName="SettingsVC" id="VDD-fo-h8F" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tfj-JP-o36"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4r8-X5-Pcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.7540263543192" y="81.4453125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o7u-L0-kEr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vWB-r2-jPA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9cl-RI-COG">
+                        <rect key="frame" x="0.0" y="24" width="1366" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o4i-QN-hYc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wq2-F8-rMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51.830161054172763" y="80.859375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="73" height="72"/>
+        <image name="MainImage" width="711" height="440"/>
+        <image name="SecondMainImage" width="470" height="227"/>
+        <image name="Settings" width="112" height="112"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
